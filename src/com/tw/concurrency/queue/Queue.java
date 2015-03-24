@@ -17,6 +17,16 @@ public class Queue {
         return top;
     }
 
+    public Integer get(int index) {
+        int value = data[index];
+        try {Thread.sleep(1000);} catch (InterruptedException e) {}
+        return value;
+    }
+
+    public int size() {
+        return this.data.length;
+    }
+
     public void push(Integer value) {
         int[] cloneData = Arrays.copyOf(data, data.length + 1);
         cloneData[cloneData.length - 1] = value;

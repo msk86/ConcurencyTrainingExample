@@ -11,6 +11,10 @@ public class Problem_SingleThread implements Runnable {
     }
 
     public void run() {
+        for(int i=0;i<queue.size();i++) {
+            System.out.println("Get " + queue.get(i) + " from " + i);
+        }
+
         while(true) {
             if(queue.isEmpty()) {
                 break;
